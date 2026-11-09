@@ -25,8 +25,8 @@ exports.handler = async (event) => {
   const ip = event.headers["x-nf-client-connection-ip"] || event.headers["x-forwarded-for"] || "anon";
   if (limited(ip)) return json(429, { error: "rate_limited" });
 
-  let msgs;
-  try { msgs = JSON.parse(event.body || "{}").messages; } catch { return json(400, { error: "bad_json" }); }
+  let msgs, lang;
+  try { const b = JSON.parse(event.body || "{}"); msgs = b.messages; lang = b.lang; } catch { return json(400, { error: "bad_json" }); }
   if (!Array.isArray(msgs) || !msgs.length) return json(400, { error: "no_messages" });
   msgs = msgs.slice(-12)
     .filter(m => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
@@ -38,7 +38,7 @@ exports.handler = async (event) => {
     const r = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-      body: JSON.stringify({ model: MODEL, max_tokens: 400, system: DOKESH_PERSONA, messages: msgs }),
+      body: JSON.stringify({ model: MODEL, max_tokens: 400, system: DOKESH_PERSONA + (lang === "en" ? "\n\nThe visitor's browser is in English: reply in English unless they write in another language." : ""), messages: msgs }),
     });
     const data = await r.json();
     if (!r.ok) return json(502, { error: "upstream", detail: data?.error?.type || r.status });

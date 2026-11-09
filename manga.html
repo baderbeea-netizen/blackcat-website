@@ -33,6 +33,7 @@ nav button:focus-visible,.turn:focus-visible{outline:2px solid var(--gold);outli
 .stage img{max-height:100%;max-width:100%;height:auto;object-fit:contain;background:var(--paper);
   box-shadow:0 10px 40px rgb(0 0 0 / .55);user-select:none;-webkit-user-drag:none}
 .spread img{max-width:calc(50% - 2px)}
+.stage{direction:rtl}
 .turn{position:absolute;top:0;bottom:0;width:22%;background:none;border:0;cursor:pointer;color:transparent}
 .turn.next{left:0}.turn.prev{right:0}
 footer{display:flex;align-items:center;justify-content:center;gap:14px;padding-block:8px 14px;color:var(--muted);font-size:14px}
@@ -100,4 +101,5 @@ addEventListener('resize',()=>go(i));
 go(i);
 </script>
 
+<script src="i18n.js"></script>
 </body></html>
