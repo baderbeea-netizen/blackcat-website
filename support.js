@@ -21,7 +21,7 @@
     border-radius:99px;padding:7px 14px;border:1px solid #E0BD55;background:transparent;color:#E0BD55}
   .sp-btn:hover{background:#E0BD55;color:#1a1305}
   .sp-btn:focus-visible,.sp-box a:focus-visible,.sp-box button:focus-visible{outline:2px solid #fff;outline-offset:2px}
-  .sp-ov{position:fixed;inset:0;z-index:70;background:rgb(6 5 8 / .8);display:flex;align-items:center;justify-content:center;
+  .sp-ov[hidden]{display:none}.sp-ov{position:fixed;inset:0;z-index:70;background:rgb(6 5 8 / .8);display:flex;align-items:center;justify-content:center;
     padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
   .sp-box{width:min(420px,100%);background:#16131a;color:#f3ede4;border:1px solid #2c2733;border-radius:18px;padding:22px;
     font:15px/1.65 "IBM Plex Sans Arabic",system-ui,sans-serif;box-shadow:0 20px 60px rgb(0 0 0 / .6)}
@@ -35,7 +35,12 @@
   .sp-other{display:block;text-align:center;text-decoration:none;font-weight:700;border-radius:12px;padding:11px;background:#E0BD55;color:#1a1305}
   .sp-note{font-size:12px;color:#a49bab;margin:12px 0 0;text-align:center}
   .sp-x{display:block;margin:12px auto 0;font:inherit;font-size:14px;cursor:pointer;background:none;border:1px solid #2c2733;color:#f3ede4;border-radius:10px;padding:6px 16px}
-  @media (max-width:760px){.sp-btn span{display:none}.sp-btn{padding:0;width:40px;height:40px;justify-content:center}}
+  .sp-fab{display:none;position:fixed;z-index:64;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));
+    align-items:center;gap:7px;border:0;border-radius:99px;padding:10px 16px;background:#E0BD55;color:#1a1305;cursor:pointer;
+    font:700 15px "IBM Plex Sans Arabic",system-ui,sans-serif;box-shadow:0 8px 24px rgb(0 0 0 / .45)}
+  .sp-fab:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  @media (max-width:760px){.nav-end .sp-btn{display:none}.sp-fab{display:inline-flex}}
+  body.sp-nonav .sp-fab{display:inline-flex}
   `;
   const st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
@@ -56,13 +61,19 @@
       <button type="button" class="sp-x">${L.close}</button></div>`;
   document.body.appendChild(ov);
 
+  // Floating button: always shown on phones (the header has no room there) and on pages without a header.
+  const fab = document.createElement("button");
+  fab.type = "button"; fab.className = "sp-fab"; fab.setAttribute("data-no-i18n", ""); fab.setAttribute("aria-label", L.title);
+  fab.innerHTML = heart + "<span>" + L.btn + "</span>";
   function place() {
     const nav = document.querySelector(".nav-end");
     if (nav) { const pill = nav.querySelector(".pill"); nav.insertBefore(btn, pill || null); }
-    else { btn.style.cssText = "position:fixed;top:14px;inset-inline-end:14px;z-index:65"; document.body.appendChild(btn); }
+    else document.body.classList.add("sp-nonav");
+    document.body.appendChild(fab);
   }
   let last = null;
-  btn.onclick = () => { last = document.activeElement; ov.hidden = false; ov.querySelector(".sp-amts a").focus(); };
+  const open = () => { last = document.activeElement; ov.hidden = false; ov.querySelector(".sp-amts a").focus(); };
+  btn.onclick = open; fab.onclick = open;
   const close = () => { ov.hidden = true; (last || btn).focus(); };
   ov.querySelector(".sp-x").onclick = close;
   ov.addEventListener("click", e => { if (e.target === ov) close(); });
