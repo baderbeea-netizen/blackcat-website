@@ -59,6 +59,13 @@
     "من الكتاب القديم في الصحراء إلى قاعة الحمم، وواحة الجنيات، وجيش الظلام، والمعركة الكبرى تحت شجرة العالم.": "From the ancient book in the desert to the lava hall, the fairy oasis, the army of darkness and the great battle beneath the World Tree.",
     "حوارات عربية، وتُقرأ من اليمين إلى اليسار على الجوال والكمبيوتر.": "Dialogue in Arabic; read right to left on phone or computer.",
     "اقرأ المانجا الآن": "Read the manga",
+    // Leo e-book
+    "كتاب ليو": "Leo book", "كتاب أطفال إلكتروني": "Children's e-book", "ليو: ومضة في مدينة الأدوات": "Leo: A Spark in the City of Gadgets",
+    "مصباح صغير اسمه ليو ينقذ مدرسة التقنيات العليا عندما يعمّ الظلام، ويكتشف أن الشجاعة والأفكار أهم من أحدث التقنيات.": "A little lamp named Leo saves the High Tech School when the lights go out, and learns that courage and ideas matter more than the latest tech.",
+    "قصة مصوّرة للأطفال من 5 إلى 9 سنوات، تأليف بدر الدين الأمين.": "An illustrated story for ages 5 to 9, written by Bader Eddine El Amine.",
+    "19 صفحة PDF: قصة بأسلوب الكوميكس، وخريطة مدينة إليكتروبوليس، و4 صفحات تلوين منها صفحتان مع دوكش.": "19-page PDF: a comic-style story, a map of Electropolis and 4 colouring pages, two of them with Dokesh.",
+    "اشترِ الكتاب • 10 ر.ق": "Buy the book • 10 QAR",
+    "كيف التقينا": "How We Met", "شاهد: كيف التقينا": "Watch: How We Met", "قبل كل المقالب… بدر وحيد في المدينة، وقطّ أسود على مقعد في الحديقة.": "Before all the pranks… Badr alone in the city, and a black cat on a park bench.",
     // shop
     "متجر Black Cat": "Black Cat Shop", "اقتنِ دوكش وأبطال المسلسلات على ملابسك وجدرانك، أو حمّل اللوحات بدقة عالية.": "Wear Dokesh and the heroes of the series, hang them on your wall, or download high-resolution art.",
     "🛍️ تيشيرتات وبوسترات وستيكرات": "🛍️ T-shirts, posters and stickers",

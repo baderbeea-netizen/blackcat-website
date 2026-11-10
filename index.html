@@ -367,6 +367,22 @@ footer a{color:var(--cream)}
   </div>
 </section>
 
+<section class="band arcade alt" id="book">
+  <div class="inner">
+    <a href="https://dokesh.store/products/%D9%84%D9%8A%D9%88-%D9%88%D9%85%D8%B6%D8%A9-%D9%81%D9%8A-%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D8%AF%D9%88%D8%A7%D8%AA-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A" target="_blank" rel="noopener" class="mcover"><img src="media/leo_cover.jpg" alt="غلاف كتاب ليو: ومضة في مدينة الأدوات، المصباح الصغير ليو في مدينة الأجهزة الذكية" loading="lazy"></a>
+    <div>
+      <div class="eyebrow">كتاب أطفال إلكتروني <span class="new">جديد</span></div>
+      <h2>ليو: ومضة في مدينة الأدوات</h2>
+      <ul>
+        <li>مصباح صغير اسمه ليو ينقذ مدرسة التقنيات العليا عندما يعمّ الظلام، ويكتشف أن الشجاعة والأفكار أهم من أحدث التقنيات.</li>
+        <li>قصة مصوّرة للأطفال من 5 إلى 9 سنوات، تأليف بدر الدين الأمين.</li>
+        <li>19 صفحة PDF: قصة بأسلوب الكوميكس، وخريطة مدينة إليكتروبوليس، و4 صفحات تلوين منها صفحتان مع دوكش.</li>
+      </ul>
+      <div class="ctas"><a class="btn gold" href="https://dokesh.store/products/%D9%84%D9%8A%D9%88-%D9%88%D9%85%D8%B6%D8%A9-%D9%81%D9%8A-%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D8%AF%D9%88%D8%A7%D8%AA-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A" target="_blank" rel="noopener">اشترِ الكتاب • 10 ر.ق</a></div>
+    </div>
+  </div>
+</section>
+
 <section class="band" id="shop">
   <div class="inner">
     <div class="sec-head"><div><h2>متجر Black Cat</h2><p>اقتنِ دوكش وأبطال المسلسلات على ملابسك وجدرانك، أو حمّل اللوحات بدقة عالية.</p></div></div>
@@ -463,6 +479,7 @@ footer a{color:var(--cream)}
 <script>
 const SERIES=[
   {id:"comedy",name:"دوكش وبدر",tag:"كوميديا يومية",desc:"مواقف قصيرة بين دوكش وبدر: مقابلات عمل، وصايا، وفواتير لا تنتهي.",tall:false,eps:[
+    {f:"howwemet",t:"كيف التقينا",d:"0:54",s:"قبل كل المقالب… بدر وحيد في المدينة، وقطّ أسود على مقعد في الحديقة."},
     {f:"beach",t:"الطقس الجميل",d:"0:12",s:"دوكش يمدح الجو المشمس… والعاصفة تسمعه."},
     {f:"bed",t:"قصة قبل النوم",d:"0:12",s:"بدر يقرأ لدوكش قصة… لكن من ينام أولًا؟"},
     {f:"job",t:"مقابلة العمل",d:"0:12",s:"دوكش مدير التوظيف، وسؤاله الوحيد عن علب التونة."},
@@ -524,7 +541,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!modal.hidden)close
 const HERO=[
   {id:"shatat",title:"شتات الذهب واليقظة",en:"The Five Guardians · Episode 0",vid:"amana0",start:86,btn:"شاهد الحلقة 0",disc:"الحراس الخمسة"},
   {id:"eclipse",title:"ECLIPSE OF THE CHOSEN",latin:true,en:"New · Episode 8",vid:"eclipse8",start:126,btn:"شاهد الحلقة 8"},
-  {id:"comedy",title:"دوكش وبدر",en:"Dokesh & Badr",vid:"love",start:0,btn:"شاهد: الحب غالي"},
+  {id:"comedy",title:"دوكش وبدر",en:"Dokesh & Badr · How We Met",vid:"howwemet",start:14,btn:"شاهد: كيف التقينا"},
   {id:"podcast",title:"Nine Lives",latin:true,en:"The Dokesh podcast",vid:"ninelives2",start:2,btn:"شاهد الحلقة 2"}
 ];
 const SEG=14;let cur=-1,front=document.getElementById("vA"),back=document.getElementById("vB"),soundOn=false,rot=null;
