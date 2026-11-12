@@ -30,6 +30,7 @@
     "الحب غالي": "Love Is Expensive", "عقد ألماس للونا… وبطاقة بدر هي اللي تدفع.": "A diamond necklace for Luna… paid for with Badr's card.",
     "الحلقة 7: الوصية": "Episode 7: The Will", "بدر مريض بالزكام، ودوكش جاهز بورقة الوصية.": "Badr has a cold, and Dokesh is ready with the will.",
     "دوكش يستضيف بدر في استوديو البودكاست، ويخرج دائمًا بالكلمة الأخيرة.": "Dokesh hosts Badr in the podcast studio and always gets the last word.",
+    "الحلقة 1: الصديق اللي خانك": "Episode 1: The Friend Who Betrayed You", "دوكش يسأل بدر عن صديقه اللي خانه… والنهاية عند لونا.": "Dokesh asks Badr about the friend who betrayed him… and Luna gets the last word.",
     "الحلقة 2: إقراض المال": "Episode 2: Lending Money", "هل تقرض صديقك؟ دوكش عنده رأي آخر.": "Would you lend a friend money? Dokesh has other ideas.",
     "الحلقة 0: أمانة واحة النجوم": "Episode 0: The Oasis of Stars", "بداية القصة": "Where it begins",
     "عين الشمس وعين القمر وجوهرة متصدعة… المختارون يستيقظون قبل الكسوف.": "An eye of sun, an eye of moon and a cracked gem… the chosen awaken before the eclipse.",
